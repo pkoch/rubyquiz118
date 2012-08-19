@@ -50,5 +50,5 @@ def microwave(seconds, opts={})
 
   generate_keypresses_for_seconds(seconds).sort_by! do |e|
     calculate_travel_distance(e)
-  end[0]
+  end[0].chomp('*').to_i
 end
