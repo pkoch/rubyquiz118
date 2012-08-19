@@ -6,6 +6,14 @@ GEM
       ZenTest (>= 4.4.1)
     autotest-fsevent (0.2.8)
       sys-uname
+    columnize (0.3.6)
+    debugger (1.2.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.3)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.3)
     ffi (1.1.5)
     sys-uname (0.9.0)
       ffi (>= 1.0.0)
@@ -16,3 +24,4 @@ PLATFORMS
 DEPENDENCIES
   autotest
   autotest-fsevent
+  debugger
