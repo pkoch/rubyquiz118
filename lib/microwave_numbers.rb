@@ -48,7 +48,9 @@ end
 def microwave(seconds, opts={})
   skew = opts[:skew] || 0
 
-  generate_keypresses_for_seconds(seconds).sort_by! do |e|
+  Range.new(-skew, +skew).to_a.map do |d|
+    generate_keypresses_for_seconds(seconds + d)
+  end.reduce(:+).sort_by! do |e|
     calculate_travel_distance(e)
   end[0].chomp('*').to_i
 end

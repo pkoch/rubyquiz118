@@ -57,4 +57,12 @@ class TestMicrowaveNumbers < MiniTest::Unit::TestCase
   def test_123
     assert_equal 123, microwave(123)
   end
+
+  def test_12_skew_1
+    assert_equal 11, microwave(12, skew: 1)
+  end
+
+  def test_90_skew_9
+    assert_equal 99, microwave(90, skew: 9)
+  end
 end
