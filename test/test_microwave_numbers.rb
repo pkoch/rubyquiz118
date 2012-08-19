@@ -41,4 +41,20 @@ class TestMicrowaveNumbers < MiniTest::Unit::TestCase
   def test_0
     assert_equal '0*', microwave(0)
   end
+
+  def test_99
+    assert_equal '99*', microwave(99)
+  end
+
+  def test_71
+    assert_equal '111*', microwave(71)
+  end
+
+  def test_120
+    assert_equal '200*', microwave(120)
+  end
+
+  def test_123
+    assert_equal '123*', microwave(123)
+  end
 end
